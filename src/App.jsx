@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Link, Route } from "wouter";
+
 import './App.css';
 import { ListOfGifs } from './components/ListOfGifs.jsx';
 
 function App() {
-  const [keyword, setKeyword] = useState('javascript');
+
   return (
     <div className="App">
-      <button onClick={()=>setKeyword('lords of the rings')}>Cambiar la keyword</button>
-      <ListOfGifs
-        keyword={keyword}
-      />
+      <Link href='/gif/metro'>metro</Link><br />
+      <Link href='/gif/skyrim'>Skyrim</Link><br />
+      <Link href='/gif/fallout'>fallout</Link><br />
+      <Route path='/gif/:keyword' component={ListOfGifs} />
     </div>
   )
 };
