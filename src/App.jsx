@@ -4,18 +4,17 @@ import { getGifs } from './services/getGifs.jsx';
 
 function App() {
 
-  const [gifs, setGifs] = useState(['primero', 'segundo']);
+  const [gifs, setGifs] = useState([]);
 
   useEffect(() => {
-    console.log('render');
+    getGifs().then(gifs => setGifs(gifs));
   }, []);
   
   return (
     <div className="App">
       {
-        gifs.map((elem, index) => <p key={index}>{elem}</p>)
+        gifs.map((elem, index) => <img key={index} src={elem.url} alt={index} /> )
       }
-      <button onClick={()=> setGifs(gifsDifferent)}>Cambiar</button>
     </div>
   )
 };
