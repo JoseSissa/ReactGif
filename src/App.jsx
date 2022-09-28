@@ -32,6 +32,7 @@ function App() {
       <Route path='/' component={Home}></Route>
       
       <Route path='/search/:keyword' component={ListOfGifs} />
+      
     </div>
   )
 };
