@@ -21,13 +21,17 @@ function ListOfGifs({ params }) {
     if (loading ) return <div className='loading'>Cargando ...</div>
 
     return ( 
-        gifs.map(({id, title, url}) =>
-            <Gif 
-                key={id}
-                title={title}
-                url={url}
-            />
-        )
+        <div className='gallery'>
+            {
+                gifs.map(({id, title, url}) =>
+                    <Gif 
+                        key={id}
+                        title={title}
+                        url={url}
+                    />
+                )
+            }
+        </div>
     );
 }
 
