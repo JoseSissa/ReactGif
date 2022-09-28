@@ -29,9 +29,9 @@ function App() {
         <button className='input-search__button' type="submit">Search</button>
       </form>
 
-      <Route path='/' component={Home}></Route>
+      <Route path='/' component={ Home }></Route>
       
-      <Route path='/search/:keyword' component={ListOfGifs} />
+      <Route path='/search/:keyword' component={ ListOfGifs } />
       
     </div>
   )

@@ -1,35 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Gif } from '../Gif/Gif';
-import { getGifs } from '../../services/getGifs.jsx';
 import './ListOfGifs.css';
+import { useGifs } from '../../hooks/useGifs';
 
 function ListOfGifs({ params }) {
     const { keyword } = params;
-    const [gifs, setGifs] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const { loading, gifs } = useGifs(keyword);    
 
-    useEffect(() => {
-        setLoading(true);
-        getGifs({ keyword })
-            .then(gifs => {
-                setGifs(gifs)
-                setLoading(false)
-            })
-    }, [keyword]);
-
-    // There are two return because we have if/else condition.
-    if (loading ) return <div className='loading'>Cargando ...</div>
-
-    return ( 
+    return (
         <div className='gallery'>
             {
-                gifs.map(({id, title, url}) =>
+                loading
+                    ? <div className='loading'>Cargando ...</div>
+                    : (gifs.map(({id, title, url}) =>
                     <Gif 
                         key={id}
                         title={title}
                         url={url}
                     />
-                )
+                ))
             }
         </div>
     );

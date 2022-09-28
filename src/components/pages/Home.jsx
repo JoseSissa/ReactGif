@@ -1,13 +1,24 @@
 import React from 'react';
-import { Link } from "wouter";
+import { Gif } from '../Gif/Gif';
+import { useGifs } from '../../hooks/useGifs';
 
 function Home() {
+    const { loading, gifs } = useGifs();
+
     return ( 
-        <>
-            <Link href='/search/metro'>metro</Link><br />
-            <Link href='/search/skyrim'>Skyrim</Link><br />
-            <Link href='/search/fallout'>fallout</Link><br />
-        </>
+        <div className='gallery'>
+            {
+                loading
+                    ? <div className='loading'>Cargando ...</div>
+                    : (gifs.map(({id, title, url}) =>
+                    <Gif 
+                        key={id}
+                        title={title}
+                        url={url}
+                    />
+                ))
+            }
+        </div>
      );
 }
 
