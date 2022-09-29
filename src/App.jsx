@@ -40,7 +40,7 @@ function App() {
           <button className='input-search__button' type="submit">Search</button>
         </form>
 
-        {/* <GifsContextProvider.Provider> */}
+        <GifsContextProvider>
 
           <Route path='/' component={ Home }></Route>
           
@@ -48,7 +48,7 @@ function App() {
 
           <Route path='/detail/:id' component={ Detail } />
 
-        {/* </GifsContextProvider.Provider> */}
+        </GifsContextProvider>
 
       </div>
     </StaticContext.Provider>
