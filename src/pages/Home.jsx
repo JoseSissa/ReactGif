@@ -1,6 +1,6 @@
 import React from 'react';
-import { Gif } from '../Gif/Gif';
-import { useGifs } from '../../hooks/useGifs';
+import { Gif } from '../components/Gif/Gif';
+import { useGifs } from '../hooks/useGifs';
 
 function Home() {
     const { loading, gifs } = useGifs();
@@ -13,6 +13,7 @@ function Home() {
                     : (gifs.map(({id, title, url}) =>
                     <Gif 
                         key={id}
+                        id={id}
                         title={title}
                         url={url}
                     />
