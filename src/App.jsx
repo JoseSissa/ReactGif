@@ -6,7 +6,8 @@ import { ListOfGifs } from './components/ListOfGifs/ListOfGifs.jsx';
 import { Detail } from './pages/Detail';
 import { Home } from './pages/Home.jsx';
 // Context
-import { Context } from './context/StaticContext.jsx';
+import { StaticContext } from './context/StaticContext.jsx';
+import { GifsContextProvider } from './context/GifsContext.jsx';
 
 function App() {
 
@@ -22,12 +23,12 @@ function App() {
   };
 
   return (
-    <Context.Provider value={
-      {
-        name: 'Jose',
-        value: true
+    <StaticContext.Provider value={
+        {
+          name: 'Jose',
+          value: true
+        }
       }
-    }
     >
       <div className="App">
         <Link href='/'>
@@ -39,14 +40,18 @@ function App() {
           <button className='input-search__button' type="submit">Search</button>
         </form>
 
-        <Route path='/' component={ Home }></Route>
-        
-        <Route path='/search/:keyword' component={ ListOfGifs } /> 
+        {/* <GifsContextProvider.Provider> */}
 
-        <Route path='/detail/:id' component={ Detail } />
+          <Route path='/' component={ Home }></Route>
+          
+          <Route path='/search/:keyword' component={ ListOfGifs } /> 
+
+          <Route path='/detail/:id' component={ Detail } />
+
+        {/* </GifsContextProvider.Provider> */}
 
       </div>
-    </Context.Provider>
+    </StaticContext.Provider>
   )
 };
 

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GifsContext } from '../context/GifsContext.jsx';
+import { StaticContext } from '../context/StaticContext.jsx';
 
 function Detail({ params }) {
-    const {id} = params;
+
+    const context = useContext(StaticContext);
+    console.log(context);
+
     return ( 
         <>
-            <h3>{id}</h3>
+            <h3>{params.id}</h3>
         </>
     );
 }

@@ -1,10 +1,9 @@
-import React, { createContext } from 'react';
+import React from 'react';
 
-// If 
-const Context = createContext({
+const StaticContext =  React.createContext({
     name: "Valores sin estar dentro del provider",
     value: true
 })
 
-export { Context };
+export { StaticContext };
 
