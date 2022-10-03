@@ -2,11 +2,9 @@ import React from 'react';
 import { Link } from 'wouter';
 
 function Category({ gifs }) {
-    for (const i of gifs) {
-        console.log(i.name);
-    }
+    
     return (
-        <div className='trendings'>
+        <aside className='trendings'>
             <h3>Tendencias</h3>
             <ul>
                 {
@@ -19,7 +17,7 @@ function Category({ gifs }) {
                     ))
                 }
             </ul>
-        </div>
+        </aside>
      );
 }
 
