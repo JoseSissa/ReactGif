@@ -8,7 +8,7 @@ function Home() {
 
     return ( 
         <>
-            {/* <div className='gallery'>
+            <div className='gallery'>
                 {
                     loading
                         ? <div className='loading'>Cargando ...</div>
@@ -21,7 +21,7 @@ function Home() {
                         />
                     ))
                 }
-            </div> */}
+            </div>
             <TrendingSearches />
         </>
      );

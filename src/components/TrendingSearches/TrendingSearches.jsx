@@ -8,7 +8,6 @@ function TrendingSearches() {
         getTrendingGifsService()
             .then(setTrending)
     }, []);
-    console.log(trending);
 
     return <Category gifs={trending} />;
 }
