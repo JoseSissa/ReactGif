@@ -1,6 +1,6 @@
 import React from 'react';
 import { Gif } from '../components/Gif/Gif';
-import { TrendingSearches } from '../components/TrendingSearches/TrendingSearches';
+import { LazyTrending } from '../components/TrendingSearches/TrendingSearches';
 import { useGifs } from '../hooks/useGifs';
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
                     ))
                 }
             </div>
-            <TrendingSearches />
+            <LazyTrending />
         </>
      );
 }
