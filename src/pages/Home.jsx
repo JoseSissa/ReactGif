@@ -1,11 +1,10 @@
 import React from 'react';
 import { Gif } from '../components/Gif/Gif';
-import { LazyTrending } from '../components/TrendingSearches/TrendingSearches';
+import { LazyTrending } from '../components/TrendingSearches/LazyTrending.jsx';
 import { useGifs } from '../hooks/useGifs';
 
 function Home() {
     const { loading, gifs } = useGifs();
-
     return ( 
         <>
             <div className='gallery'>
