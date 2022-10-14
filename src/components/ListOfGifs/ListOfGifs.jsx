@@ -6,7 +6,6 @@ import { useGifs } from '../../hooks/useGifs';
 function ListOfGifs({ params }) {
     const { keyword } = params;
     const { loading, gifs } = useGifs(keyword);
-    console.log(gifs);
 
     return (
         <div className='gallery'>
