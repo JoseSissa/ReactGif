@@ -8,9 +8,12 @@ function useNearScreen({ distance = '100px' } = {}) {
             const elem = entries[0];
             if(elem.isIntersecting) {
                 setShow(true)
-                // Desconectamos el observer para que no siga observando el elemento luego de que el estado se haya cambiado a true, ahorrando recursos
+                // Desconectamos el observer para que no siga observando luego de que el estado se haya cambiado a true, ahorrando recursos
                 // Evitamos que se está ejecutando el setShow cuando ya no lo necesitamos
                 observer.disconnect()
+
+                // Con esto dejamos de observar sólo un elemento, esto por si tenemos varios elementos que se estén observando
+                // observer.unobserve()
             }
         };
         const options = { rootMargin: distance }

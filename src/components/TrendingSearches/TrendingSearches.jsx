@@ -3,7 +3,6 @@ import { getTrendingGifsService } from '../../services/getTrendingGifsService';
 import { Category } from '../Category/Category';
 
 export default function TrendingSearches() {
-    console.log('trending seraches');
     const [trending, setTrending] = useState([]);
     useEffect(() => {
         getTrendingGifsService()
