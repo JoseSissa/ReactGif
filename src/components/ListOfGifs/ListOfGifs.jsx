@@ -5,7 +5,11 @@ import { useGifs } from '../../hooks/useGifs';
 
 function ListOfGifs({ params }) {
     const { keyword } = params;
-    const { loading, gifs } = useGifs(keyword);
+    const { loading, gifs, setPage } = useGifs(keyword);
+
+    const handleNextPage = () => {
+        setPage(prevPage => prevPage + 1)
+    }
 
     return (
         <div className='gallery'>
@@ -21,6 +25,8 @@ function ListOfGifs({ params }) {
                     />
                 ))
             }
+            <br />
+            <button onClick={handleNextPage}>Get next Page</button>
         </div>
     );
 }
