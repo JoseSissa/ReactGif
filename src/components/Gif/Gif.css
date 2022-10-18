@@ -1,6 +1,10 @@
+/* .gif { */
 .gif-image {
     display: block;
     width: 100%;
     max-width: 100%;
     margin-bottom: 8px;
+    /* max-height: 200px;
+    object-fit:cover;
+    overflow: hidden; */
 }

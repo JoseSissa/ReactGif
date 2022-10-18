@@ -18,4 +18,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px;
+    align-items: center;
+    /* grid-template-rows: masonry; -> Propiedad que sólo está disponible para Firefox, aunque no de manera oficial todavía */ 
 }
