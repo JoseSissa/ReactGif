@@ -28,7 +28,7 @@ function ListOfGifs({ params }) {
     // actualizará/volverá a crear la función cada vez que esas dependencias cambien (como el useEffect)
     const debounceHandleNextPage = useCallback(debounce(
         () => setPage(prevPage => prevPage + 1),
-        1000
+        500
     ), [])
 
     useEffect(() => {
