@@ -11,8 +11,6 @@ function useGifs( keyword ) {
     const {gifs, setGifs} = useContext(GifsContext)
     const [loadingNextPage, setLoadingNextPage] = useState(false);
 
-    console.log('Page', page);
-
     // If keyword is null or empty, the value will take it from localstorage or will be random
     keyword = keyword || localStorage.getItem('lastKeyword') || "random";
 

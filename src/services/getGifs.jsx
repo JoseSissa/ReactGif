@@ -1,6 +1,6 @@
 import { API_URL, API_KEY } from './settings';
 
-const getGifs = ( { keyword = 'random', limit = 10, page = 0} = {} ) => {
+const getGifs = ( { keyword = 'random', limit = 5, page = 0} = {} ) => {
     // El offset es cuantos resultados me tengo que saltar cada vez que te vaya a entregar resultados
     const apiURL = `${API_URL}/search?api_key=${API_KEY}=${keyword}&limit=${limit}&offset=${limit * page}&rating=G&lang=en`
     return (fetch(apiURL)
