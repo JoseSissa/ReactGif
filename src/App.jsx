@@ -11,9 +11,8 @@ import { GifsContextProvider } from './context/GifsContext.jsx';
 import { SearchForm } from './components/SearchForm/SearchForm';
 
 function App() {
-  const [location, setLocation] = useLocation();
-
   
+  const [location, setLocation] = useLocation();
 
   return (
     <StaticContext.Provider value={

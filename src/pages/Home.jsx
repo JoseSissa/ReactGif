@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gif } from '../components/Gif/Gif';
+import Gif from '../components/Gif/Gif';
 import { LazyTrending } from '../components/TrendingSearches/LazyTrending.jsx';
 import { useGifs } from '../hooks/useGifs';
 

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Gif } from '../components/Gif/Gif.jsx';
+import Gif from '../components/Gif/Gif.jsx';
 import { GifsContext } from '../context/GifsContext.jsx';
 import { useGifs } from '../hooks/useGifs.jsx';
 

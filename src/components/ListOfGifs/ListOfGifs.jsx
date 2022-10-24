@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useCallback } from 'react';
 // al final de ese tiempo el debounce sólo hará un llamado a la misma, ahorro de recursos
 // https://www.npmjs.com/package/just-debounce-it
 import debounce from 'just-debounce-it';
-import { Gif } from '../Gif/Gif';
+import Gif from '../Gif/Gif';
 import './ListOfGifs.css';
 import { useGifs } from '../../hooks/useGifs';
 import { useNearScreen } from '../../hooks/useNearScreen';
