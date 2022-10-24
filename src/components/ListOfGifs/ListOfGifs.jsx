@@ -40,9 +40,9 @@ function ListOfGifs({ params }) {
             {
                 loading
                     ? <div className='loading'>Cargando ...</div>
-                    : (gifs.map( ({title, id, url}) =>
+                    : (gifs.map( ({title, id, url}, index) =>
                     <Gif 
-                        key={id}
+                        key={`${id}${index}`}
                         id={id}
                         title={title}
                         url={url}

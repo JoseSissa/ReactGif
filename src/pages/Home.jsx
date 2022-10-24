@@ -11,9 +11,9 @@ function Home() {
                 {
                     loading
                         ? <div className='loading'>Cargando ...</div>
-                        : (gifs.map(({id, title, url}) =>
+                        : (gifs.map(({id, title, url}, index) =>
                         <Gif 
-                            key={id}
+                            key={`${id}${index}`}
                             id={id}
                             title={title}
                             url={url}
