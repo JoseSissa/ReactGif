@@ -24,7 +24,7 @@ function App() {
     >
       <div className="App">
         <Link href='/'>
-          <img src="../public/images/vite.svg" className='logo' alt="Logo" />
+          <img src="/images/vite.svg" className='logo' alt="Logo" />
         </Link>
 
         <SearchForm setLocation={setLocation} />
