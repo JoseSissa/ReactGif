@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './SearchForm.css';
 
 function SearchForm({ setLocation }) {
 
@@ -14,9 +15,9 @@ function SearchForm({ setLocation }) {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="input-search">
-          <input className='input-search__box' type="text" defaultValue={keyword} onChange={handleChange} placeholder="Search a Gifs here ..." />
-          <button className='input-search__button' type="submit">Search</button>
+        <form onSubmit={handleSubmit} className="form-search">
+          <input className='form-search__box' type="text" defaultValue={keyword} onChange={handleChange} placeholder="Search a Gifs here ..." />
+          <button className='form-search__button' type="submit"><img src="/public/images/search.svg" alt="search" /></button>
         </form>
     )
 };

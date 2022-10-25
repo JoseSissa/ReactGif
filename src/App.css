@@ -6,16 +6,3 @@
     text-align: center;
     margin: 50px auto;
 }
-.input-search {
-    text-align: center;
-    margin-bottom: 50px;
-}
-.input-search__box {
-    width: 300px;
-    height: 30px;
-    padding: 0 8px;
-}
-.input-search__button {
-    width: 50px;
-    height: 30px;
-}
