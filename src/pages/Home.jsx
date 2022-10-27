@@ -10,7 +10,7 @@ function Home() {
             <div className='gallery'>
                 {
                     loading
-                        ? <div className='loading'>Cargando ...</div>
+                        ? <div className="loading"><span class="loader"></span></div>
                         : (gifs.map(({id, title, url}, index) =>
                         <Gif 
                             key={`${id}${index}`}
