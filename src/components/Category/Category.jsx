@@ -12,7 +12,7 @@ function Category({ gifs }) {
                     gifs.map(elem => (
                         <li key={elem.id} className="item">
                             <Link href={`/search/${elem.name}`}>
-                                {(elem.name).toUpperCase()}
+                                {(elem.name).toLowerCase()}
                             </Link>
                         </li>
                     ))

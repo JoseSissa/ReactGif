@@ -9,3 +9,8 @@
     display: inline-block;
     margin-right: 12px;
 }
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color : rgba(255, 255, 255, 0.87);
+}
