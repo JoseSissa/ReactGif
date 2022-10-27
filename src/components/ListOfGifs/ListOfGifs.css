@@ -29,14 +29,28 @@
         transform: rotate(360deg);
     }
 }
+.lastSearch {
+    margin: 0px 0px  30px 8px;
+    text-transform: capitalize;
+}
 .gallery {
+    width: 100%;
     min-height: 100vh;
     padding: 8px 8px 30px 8px;
-    columns: 320px auto;
+    columns: 150px auto;
     column-gap: 8px;
     /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px;
     align-items: center; */
     /* grid-template-rows: masonry; -> Propiedad que sólo está disponible para Firefox, aunque no de manera oficial todavía */ 
+}
+@media (min-width: 768px) {
+    .gallery { columns: 200px auto; }
+}
+@media (min-width: 768px) {
+    .gallery { columns: 200px auto; }
+}
+@media (min-width: 1366px) {
+    .gallery { columns: 325px auto; }
 }

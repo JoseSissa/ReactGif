@@ -36,23 +36,26 @@ function ListOfGifs({ params }) {
     }, [debounceHandleNextPage, isNearScreen]);
 
     return (
-        <div className='gallery'>
-            {
-                loading
-                    ? <div className="loading"><span class="loader"></span></div>
-                    : (gifs.map( ({title, id, url}, index) =>
-                    <Gif 
-                        key={`${id}${index}`}
-                        id={id}
-                        title={title}
-                        url={url}
-                    />
-                ))
-            }
-            <div id='visor' ref={externalRef}></div>
-            {/* <br />
-            <button onClick={handleNextPage}>Get next Page</button> */}
-        </div>
+        <>
+            <h4 className='lastSearch'>Last search: {keyword.replaceAll('%20', ' ')}</h4>
+            <div className='gallery'>
+                {
+                    loading
+                        ? <div className="loading"><span className="loader"></span></div>
+                        : (gifs.map( ({title, id, url}, index) =>
+                        <Gif 
+                            key={`${id}${index}`}
+                            id={id}
+                            title={title}
+                            url={url}
+                        />
+                    ))
+                }
+                <div id='visor' ref={externalRef}></div>
+                {/* <br />
+                <button onClick={handleNextPage}>Get next Page</button> */}
+            </div>
+        </>
     );
 }
 

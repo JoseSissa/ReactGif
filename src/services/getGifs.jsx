@@ -7,7 +7,6 @@ const getGifs = ( { keyword = 'random', limit = 10, page = 0} = {} ) => {
         .then(res => res.json())
         .then(response => {
         const {data} = response
-        console.log(response);
         const gifs = data.map(image => {
             const { images, title, id } = image
             // const { url } = images.downsized_still
