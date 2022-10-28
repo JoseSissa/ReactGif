@@ -1,0 +1,13 @@
+.start-button {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    bottom: 30px;
+    right: 20px;
+    background: #000;
+    border-radius: 8px;
+    border: none;
+}
+.start-button img {
+    width: 100%;
+}

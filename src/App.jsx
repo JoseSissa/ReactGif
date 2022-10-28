@@ -9,6 +9,8 @@ import { Home } from './pages/Home.jsx';
 import { StaticContext } from './context/StaticContext.jsx';
 import { GifsContextProvider } from './context/GifsContext.jsx';
 import { SearchForm } from './components/SearchForm/SearchForm';
+import StartButton from './components/StartButton/StartButton';
+import Logo from './components/logo/Logo';
 
 function App() {
   
@@ -22,10 +24,9 @@ function App() {
         }
       }
     >
-      <div className="App">
-        <Link href='/'>
-          <img src="/images/vite.svg" className='logo' alt="Logo" />
-        </Link>
+      <div className="App">        
+        
+        <Logo />        
 
         <SearchForm setLocation={setLocation} />
 
@@ -38,6 +39,8 @@ function App() {
           <Route path='/detail/:id' component={ Detail } />
 
         </GifsContextProvider>
+
+        <StartButton />
 
       </div>
     </StaticContext.Provider>
