@@ -7,7 +7,19 @@
     background: #000;
     border-radius: 8px;
     border: none;
+    animation: pulse 3s infinite;
 }
 .start-button img {
     width: 100%;
+}
+@keyframes pulse {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }

@@ -15,6 +15,7 @@ import Logo from './components/logo/Logo';
 function App() {
   
   const [location, setLocation] = useLocation();
+  console.log(window.screen);
 
   return (
     <StaticContext.Provider value={
@@ -24,13 +25,13 @@ function App() {
         }
       }
     >
-      <div className="App">        
+      <div className="App">
         
-        <Logo />        
-
-        <SearchForm setLocation={setLocation} />
-
         <GifsContextProvider>
+
+          <Logo />
+
+          <SearchForm setLocation={setLocation} />
 
           <Route path='/' component={ Home }></Route>
           
@@ -38,9 +39,9 @@ function App() {
 
           <Route path='/detail/:id' component={ Detail } />
 
-        </GifsContextProvider>
+          <StartButton />
 
-        <StartButton />
+        </GifsContextProvider>
 
       </div>
     </StaticContext.Provider>

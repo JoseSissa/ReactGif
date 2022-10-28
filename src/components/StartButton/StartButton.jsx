@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GifsContext } from '../../context/GifsContext.jsx';
 import './StartButton.css'
 
 function StartButton() {
-
-    const goHome = () => {
-        console.log('To do something');
+    const {showButtonHome} = useContext(GifsContext)
+    if (!showButtonHome) {
+        return(
+            <a className='start-button'>
+                <img src="../../../public/images/arrow-up.svg" alt="Arrow up" />
+            </a>
+        )
+    }else{
+        return null
     }
-
-    return ( 
-        <a href='#home' className='start-button'>
-            <img src="../../../public/images/arrow-up.svg" alt="Arrow up" />
-        </a>
-     );
 }
 
 export default StartButton;

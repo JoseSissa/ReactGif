@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { useNearScreen } from '../../hooks/useNearScreen.jsx';
-// import TrendingSearches from './TrendingSearches.jsx'
+import '../ListOfGifs/ListOfGifs.css'
 
 // El lazy lo que nos permite es poder descargar el JS SÓLO cuando se necesite, 
 // osea, hacemos un import dinámico, que nos devuelve una promesa
@@ -17,8 +17,8 @@ function LazyTrending() {
 
     return <div ref={reference}>
         {/* Tenemos que envolver el componenete que se importará dinámicamente con el tag Suspense y definirle un fallback que será lo que se renderizará mientras se descargar el JS */}
-        <Suspense fallback={'Puedo renderizar un spinner/loader'}>
-            { isNearScreen ? <TrendingSearches /> : 'Puedo renderizar un spinner/loader'}
+        <Suspense fallback={<span className="loader"></span>}>
+            { isNearScreen ? <TrendingSearches /> : <span className="loader"></span>}
         </Suspense>
     </div>
 
