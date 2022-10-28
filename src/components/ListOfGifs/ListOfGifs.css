@@ -30,6 +30,7 @@
     }
 }
 .lastSearch {
+    max-width: 900px;
     margin: 0px 0px  30px 8px;
     text-transform: capitalize;
 }
@@ -53,4 +54,5 @@
 }
 @media (min-width: 1366px) {
     .gallery { columns: 325px auto; }
+    .lastSearch{ margin: 0 auto 30px;}
 }

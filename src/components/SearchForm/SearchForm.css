@@ -26,5 +26,18 @@
     background-color: #ffe01b;
 }
 .form-search__button img {
-    width: 24px;
+    width: 70%;
+}
+@media (min-width: 1366px) {
+    .form-search {
+        max-width: 900px;
+        margin: 0 auto 30px;
+    }
+    .form-search__box {
+        height: 55px;
+    }
+    .form-search__button {
+        width: 55px;
+        height: 55px;
+    }
 }
