@@ -23,7 +23,7 @@ function Logo() {
 
     return ( 
         <Link href='/'>
-            <a className='logo' ref={referenceHome}><img src="/images/vite.svg" alt="Logo" /></a>
+            <a id='logo' className='logo' ref={referenceHome}><img src="/images/vite.svg" alt="Logo" /></a>
         </Link>
      );
 }
