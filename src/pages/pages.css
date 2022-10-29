@@ -1,0 +1,14 @@
+.gifsDetail, h3, small {
+    max-width: 700px;
+    padding: 0 8px;
+    margin: 0 auto;
+}
+h3 { margin-bottom: 30px; }
+small{
+    display: block;
+    margin-bottom: 30px;
+}
+a{
+    text-decoration: none;
+    color:aliceblue;
+}

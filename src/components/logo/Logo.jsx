@@ -15,7 +15,6 @@ function Logo() {
         rootMargin: '0px',
         threshold: 1.0
     }
-
     useEffect(() => {
         const observer = new IntersectionObserver(callback, options)
         observer.observe(referenceHome.current)

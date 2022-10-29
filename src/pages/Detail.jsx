@@ -1,16 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Gif from '../components/Gif/Gif.jsx';
 import { GifsContext } from '../context/GifsContext.jsx';
 import { useGifs } from '../hooks/useGifs.jsx';
+import './pages.css'
 
 function Detail({ params }) {
 
     const { gifs } = useContext(GifsContext);
     const gif = gifs.find(elem => elem.id === params.id);
+    console.log('Gif', gif);
+    console.log('Gif', gif.title);
 
     return ( 
         <>
-            <Gif {...gif} />
+            <h3>{gif.title}</h3>
+            {/* <small><a href={gif.url}>{gif.url}</a></small> */}
+            <div className='gifsDetail'>
+                <Gif {...gif} />
+            </div>
         </>
     );
 }
