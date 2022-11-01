@@ -8,8 +8,6 @@ function Detail({ params }) {
 
     const { gifs } = useContext(GifsContext);
     const gif = gifs.find(elem => elem.id === params.id);
-    console.log('Gif', gif);
-    console.log('Gif', gif.title);
 
     return ( 
         <>

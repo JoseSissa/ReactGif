@@ -2,11 +2,14 @@ import React from 'react';
 import Gif from '../components/Gif/Gif';
 import { LazyTrending } from '../components/TrendingSearches/LazyTrending.jsx';
 import { useGifs } from '../hooks/useGifs';
+import { Link } from 'wouter'
 
 function Home() {
     const { loading, gifs } = useGifs();
+    const lastSearch = localStorage.getItem('lastKeyword')
     return ( 
         <>
+            <h4 className='lastSearch'>Last search: <Link href={`/search/${lastSearch}`}>{lastSearch.replaceAll('%20', ' ')}</Link></h4>
             <div className='gallery'>
                 {
                     loading

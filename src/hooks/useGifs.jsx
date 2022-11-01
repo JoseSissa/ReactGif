@@ -20,7 +20,6 @@ function useGifs( keyword ) {
             .then(gifs => {
                 setGifs(gifs)
                 setLoading(false)
-                // It will Store the last search in localstorage
                 localStorage.setItem('lastKeyword', keyword)
             })
     }, [keyword, setGifs]);

@@ -15,7 +15,7 @@ import Logo from './components/logo/Logo';
 function App() {
   
   const [location, setLocation] = useLocation();
-  console.log(window.screen);
+  
 
   return (
     <StaticContext.Provider value={
