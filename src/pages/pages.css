@@ -12,3 +12,6 @@ a{
     text-decoration: none;
     color:aliceblue;
 }
+a:visited {
+    color: #FFEB3A;
+}

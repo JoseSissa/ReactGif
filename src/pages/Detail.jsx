@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Gif from '../components/Gif/Gif.jsx';
 import { GifsContext } from '../context/GifsContext.jsx';
-import { useGifs } from '../hooks/useGifs.jsx';
 import './pages.css'
 
 function Detail({ params }) {
