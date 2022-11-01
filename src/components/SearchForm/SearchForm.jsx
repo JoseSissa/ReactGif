@@ -18,7 +18,7 @@ function SearchForm({ setLocation }) {
     return (
         <form onSubmit={handleSubmit} className="form-search">
           <input id='hola' ref={inputSearchRef} className='form-search__box' type="text" defaultValue={keyword} onChange={handleChange} placeholder="Search a Gif" />
-          <button className='form-search__button' type="submit"><img src="/public/images/search-icon.svg" alt="search" /></button>
+          <button className='form-search__button' type="submit"><img src="/images/search.svg" alt="search" /></button>
         </form>
     )
 };

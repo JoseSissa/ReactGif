@@ -6,10 +6,11 @@ import { Link } from 'wouter'
 
 function Home() {
     const { loading, gifs } = useGifs();
-    const lastSearch = localStorage.getItem('lastKeyword')
+    let lastSearch = localStorage.getItem('lastKeyword') || 'random'
+    // lastSearch.
     return ( 
         <>
-            <h4 className='lastSearch'>Last search: <Link href={`/search/${lastSearch}`}>{lastSearch.replaceAll('%20', ' ')}</Link></h4>
+            <h4 className='lastSearch'>Last search: <Link href={`/search/${lastSearch}`}>{lastSearch.includes('%20') ? lastSearch.replaceAll('%20', ' ') : lastSearch}</Link></h4>
             <div className='gallery'>
                 {
                     loading

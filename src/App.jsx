@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Route, Link, useLocation  } from "wouter";
+import React from 'react';
+import { Route, useLocation  } from "wouter";
 
 import './App.css';
 import { ListOfGifs } from './components/ListOfGifs/ListOfGifs.jsx';

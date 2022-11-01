@@ -37,7 +37,7 @@ function ListOfGifs({ params }) {
 
     return (
         <>
-            <h4 className='lastSearch'>Last search: {keyword.replaceAll('%20', ' ')}</h4>
+            <h4 className='lastSearch'>Last search: {keyword.includes('%20') ? keyword.replaceAll('%20', ' ') : keyword}</h4>
             <div className='gallery'>
                 {
                     loading
