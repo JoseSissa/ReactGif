@@ -9,6 +9,7 @@ import Gif from '../Gif/Gif';
 import './ListOfGifs.css';
 import { useGifs } from '../../hooks/useGifs';
 import { useNearScreen } from '../../hooks/useNearScreen';
+import useSEO from '../../hooks/useSEO';
 
 function ListOfGifs({ params }) {
     const { keyword } = params;
@@ -19,6 +20,9 @@ function ListOfGifs({ params }) {
         externalRef: loading ? null : externalRef,
         once: false
     });
+
+    const title = gifs ? `${gifs.length} results of ${keyword}` : ''
+    useSEO({title})
 
     // const handleNextPage = () => setPage(prevPage => prevPage + 1)
     // const handleNextPage = () => console.log('Next Page');

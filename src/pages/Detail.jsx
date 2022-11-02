@@ -3,11 +3,14 @@ import { Redirect } from 'wouter';
 import Gif from '../components/Gif/Gif.jsx';
 import { GifsContext } from '../context/GifsContext.jsx';
 import useSingleGif from '../hooks/useSingleGif.jsx';
+import useSEO from '../hooks/useSEO.jsx';
 import './pages.css'
 
 function Detail({ params }) {
 
     const { gif, isLoading, isError } = useSingleGif({id: params.id})
+    const title = gif ? gif.title : 'Title'
+    useSEO({ title })
 
     if(isLoading) <div className="loading"><span className="loader"></span></div>
     if(isError) return <Redirect to='/404' />
