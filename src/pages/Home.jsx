@@ -3,6 +3,7 @@ import Gif from '../components/Gif/Gif';
 import { LazyTrending } from '../components/TrendingSearches/LazyTrending.jsx';
 import { useGifs } from '../hooks/useGifs';
 import { Link } from 'wouter'
+import Spinner from '../components/Spinner/Spinner';
 
 function Home() {
     const { loading, gifs } = useGifs();
@@ -14,7 +15,7 @@ function Home() {
             <div className='gallery'>
                 {
                     loading
-                        ? <div className="loading"><span className="loader"></span></div>
+                        ? <Spinner />
                         : (gifs.map(({id, title, url}, index) =>
                         <Gif 
                             key={`${id}${index}`}

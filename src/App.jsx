@@ -11,6 +11,7 @@ import { GifsContextProvider } from './context/GifsContext.jsx';
 import { SearchForm } from './components/SearchForm/SearchForm';
 import StartButton from './components/StartButton/StartButton';
 import Logo from './components/logo/Logo';
+import notFound from './pages/404';
 
 function App() {
   
@@ -38,6 +39,8 @@ function App() {
           <Route path='/search/:keyword' component={ ListOfGifs } /> 
 
           <Route path='/detail/:id' component={ Detail } />
+
+          <Route path='/404' component={ notFound } />
 
           <StartButton />
 
