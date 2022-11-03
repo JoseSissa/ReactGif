@@ -9,7 +9,7 @@ import Gif from '../Gif/Gif';
 import './ListOfGifs.css';
 import { useGifs } from '../../hooks/useGifs';
 import { useNearScreen } from '../../hooks/useNearScreen';
-import useSEO from '../../hooks/useSEO';
+import { Helmet } from 'react-helmet';
 
 function ListOfGifs({ params }) {
     const { keyword } = params;
@@ -21,8 +21,8 @@ function ListOfGifs({ params }) {
         once: false
     });
 
-    const title = gifs ? `${gifs.length} results of ${keyword}` : ''
-    useSEO({title})
+    const title = gifs ? `${gifs.length} results of ${keyword.includes('%20') ? keyword.replaceAll('%20', ' ') : keyword}` : ''
+    
 
     // const handleNextPage = () => setPage(prevPage => prevPage + 1)
     // const handleNextPage = () => console.log('Next Page');
@@ -41,19 +41,24 @@ function ListOfGifs({ params }) {
 
     return (
         <>
+            <Helmet>
+                <title>{title}</title>
+                <meta name='description' content={title} />
+            </Helmet>
             <h4 className='lastSearch'>Last search: {keyword.includes('%20') ? keyword.replaceAll('%20', ' ') : keyword}</h4>
             <div className='gallery'>
                 {
                     loading
                         ? <div className="loading"><span className="loader"></span></div>
-                        : (gifs.map( ({title, id, url}, index) =>
-                        <Gif 
-                            key={`${id}${index}`}
-                            id={id}
-                            title={title}
-                            url={url}
-                        />
-                    ))
+                        :
+                        (gifs.map( ({title, id, url}, index) =>
+                            <Gif 
+                                key={`${id}${index}`}
+                                id={id}
+                                title={title}
+                                url={url}
+                            />)
+                        )
                 }
                 <div id='visor' ref={externalRef}></div>
                 {/* <br />

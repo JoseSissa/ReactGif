@@ -4,6 +4,7 @@ import { LazyTrending } from '../components/TrendingSearches/LazyTrending.jsx';
 import { useGifs } from '../hooks/useGifs';
 import { Link } from 'wouter'
 import Spinner from '../components/Spinner/Spinner';
+import { Helmet } from 'react-helmet';
 
 function Home() {
     const { loading, gifs } = useGifs();
@@ -11,6 +12,9 @@ function Home() {
     // lastSearch.
     return ( 
         <>
+            <Helmet>
+                <title>Home | Gif of Giphy</title>
+            </Helmet>
             <h4 className='lastSearch'>Last search: <Link href={`/search/${lastSearch}`}>{lastSearch.includes('%20') ? lastSearch.replaceAll('%20', ' ') : lastSearch}</Link></h4>
             <div className='gallery'>
                 {
