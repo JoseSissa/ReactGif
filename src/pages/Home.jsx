@@ -12,25 +12,28 @@ function Home() {
     // lastSearch.
     return ( 
         <>
-            <Helmet>
-                <title>Home | Gif of Giphy</title>
-            </Helmet>
             <h4 className='lastSearch'>Last search: <Link href={`/search/${lastSearch}`}>{lastSearch.includes('%20') ? lastSearch.replaceAll('%20', ' ') : lastSearch}</Link></h4>
-            <div className='gallery'>
-                {
-                    loading
-                        ? <Spinner />
-                        : (gifs.map(({id, title, url}, index) =>
-                        <Gif 
-                            key={`${id}${index}`}
-                            id={id}
-                            title={title}
-                            url={url}
-                        />
-                    ))
-                }
-            </div>
-            <LazyTrending />
+            <section className='home'>
+                <Helmet>
+                    <title>Home | Gif of Giphy</title>
+                    <link rel="canonical" href="https://gifofgiphy.vercel.app/"></link>
+                </Helmet>            
+                <div className='gallery'>
+                    {
+                        loading
+                            ? <Spinner />
+                            : (gifs.map(({id, title, url}, index) =>
+                            <Gif 
+                                key={`${id}${index}`}
+                                id={id}
+                                title={title}
+                                url={url}
+                            />
+                        ))
+                    }
+                </div>
+                <LazyTrending />
+            </section>
         </>
      );
 }

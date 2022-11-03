@@ -2,11 +2,9 @@
 
 Este proyecto toma muestra Gifs de acuerdo a la búsqueda que se realice.
 
-El proyecto toma la API: https://giphy.com/
+El proyecto toma la API de: https://giphy.com/
 
-Está hecho con React JS
-
-Además de implementar módulos/funcionalidades como:
+Está hecho con React JS e implementa módulos/funcionalidades como:
 
 ✅ Infinite Scroll
 
@@ -14,6 +12,8 @@ Además de implementar módulos/funcionalidades como:
 
 ✅ Lazy load
 
+✅ react-helmet -> Para el tema del SEO
+
 ✅ https://vercel.com/ -> Donde se aloja el proyecto
 
-https://gifofgiphy.vercel.app/
+❇️ -> Deploy de la página: https://gifofgiphy.vercel.app/

@@ -12,9 +12,6 @@ a{
     text-decoration: none;
     color:aliceblue;
 }
-a:visited {
-    color: #FFEB3A;
-}
 .notFoundPage {
     max-width: 1366px;
     text-align: center;
@@ -31,4 +28,17 @@ a:visited {
 .notFoundPage a {
     font-size: 30px;
     text-decoration: underline;
+}
+@media (min-width: 1024px) {
+    .home {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr );
+        grid-template-areas: "uno uno uno dos";
+    }
+    .trendings ul {
+        text-align: end;
+    }
+    .trendings .item {
+        /* margin-right: 30px; */
+    }
 }

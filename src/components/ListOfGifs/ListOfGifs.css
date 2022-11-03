@@ -3,6 +3,9 @@
     margin: 0px 0px  30px 8px;
     text-transform: capitalize;
 }
+.lastSearch a:visited {
+    color: #ffe01b;
+}
 .gallery {
     width: 100%;
     min-height: 100vh;
@@ -14,6 +17,7 @@
     gap: 16px;
     align-items: center; */
     /* grid-template-rows: masonry; -> Propiedad que sólo está disponible para Firefox, aunque no de manera oficial todavía */ 
+    grid-area: uno;
 }
 @media (min-width: 768px) {
     .gallery { columns: 200px auto; }
@@ -28,4 +32,5 @@
 .container-trendings {
     position: relative;
     max-width: 1366px;
+    grid-area: dos;
 }
