@@ -14,6 +14,6 @@ Además de implementar módulos/funcionalidades como:
 
 ✅ Lazy load
 
-✅ https://render.com/ -> Donde se aloja el proyecto
+✅ https://vercel.com/ -> Donde se aloja el proyecto
 
-https://gifsofgiphy.onrender.com/
+https://gifofgiphy.vercel.app/

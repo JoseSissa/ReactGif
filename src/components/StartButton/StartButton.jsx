@@ -9,7 +9,7 @@ function StartButton() {
 
     return(
         <a href='#logo' className={`start-button ${showButtonHome ? 'hide' : ''}`}>
-            <img src="../../../public/images/arrow-up.svg" alt="Arrow up" />
+            <img src="/images/arrow-up.svg" alt="Arrow up" />
         </a>
     )
 }
