@@ -10,7 +10,7 @@ Está hecho con React JS e implementa módulos/funcionalidades como:
 
 ✅ Wouter -> Para establecer las rutas
 
-✅ Lazy load
+✅ Lazy load / Interseption observer
 
 ✅ react-helmet -> Para el tema del SEO
 
