@@ -12,7 +12,7 @@ function Home() {
     // lastSearch.
     return ( 
         <>
-            <h4 className='lastSearch'>Last search: <Link href={`/search/${lastSearch}`}>{lastSearch.includes('%20') ? lastSearch.replaceAll('%20', ' ') : lastSearch}</Link></h4>
+            <h4 className='lastSearch'>Last search: <Link href={`/search/${lastSearch}`}>{decodeURIComponent(lastSearch)}</Link></h4>
             <section className='home'>
                 <Helmet>
                     <title>Home | Gif of Giphy</title>

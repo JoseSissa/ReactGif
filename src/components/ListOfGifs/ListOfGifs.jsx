@@ -12,8 +12,8 @@ import { useNearScreen } from '../../hooks/useNearScreen';
 import { Helmet } from 'react-helmet';
 
 function ListOfGifs({ params }) {
-    const { keyword } = params;
-    const { loading, gifs, setPage } = useGifs(keyword);
+    const { keyword, rating = 'g' } = params;
+    const { loading, gifs, setPage } = useGifs(keyword, rating);
     const externalRef = useRef();
     const { isNearScreen } = useNearScreen({
         distance: '100px',
@@ -21,7 +21,7 @@ function ListOfGifs({ params }) {
         once: false
     });
 
-    const title = gifs ? `${gifs.length} results of ${keyword.includes('%20') ? keyword.replaceAll('%20', ' ') : keyword}` : ''
+    const title = gifs ? `${gifs.length} results of ${decodeURIComponent(keyword)}` : ''
     
 
     // const handleNextPage = () => setPage(prevPage => prevPage + 1)
@@ -45,7 +45,7 @@ function ListOfGifs({ params }) {
                 <title>{title}</title>
                 <meta name='description' content={title} />
             </Helmet>
-            <h4 className='lastSearch'>Last search: {keyword.includes('%20') ? keyword.replaceAll('%20', ' ') : keyword}</h4>
+            <h4 className='lastSearch'>Last search: {decodeURIComponent(keyword)}</h4>
             <div className='gallery'>
                 {
                     loading
