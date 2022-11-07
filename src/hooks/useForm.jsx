@@ -6,7 +6,7 @@ const ACTIONS = {
     UPDATE_LANGUAGE: 'update_lang'
   }
   
-  const reducer = (state, action) => {
+  const REDUCER = (state, action) => {
     switch (action.type) {
         case ACTIONS.UPDATE_KEYWORD:
         return {
@@ -30,7 +30,7 @@ const ACTIONS = {
   }
   
   export default function useForm({ initialLang, initialKeyword, initialRating }) {
-    const [state, dispatch] = useReducer(reducer, {
+    const [state, dispatch] = useReducer(REDUCER, {
       lang: initialLang,
       keyword: initialKeyword,
       rating: initialRating,
