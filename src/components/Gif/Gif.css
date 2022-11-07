@@ -1,4 +1,28 @@
-/* .gif { */
+:root {
+    --background-description: rgba(0,0,0,0.8);
+    --color-description: #fff;
+}
+.gif {
+    cursor: pointer;
+    border-radius: 12px;
+    position: relative;
+}
+.gif:hover {
+    --background-hover-color: #ffe01b;
+    --color-description: #000;
+    outline: 2px solid var(--background-hover-color);
+}
+.gif-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 8px;
+    border-radius: 0 12px 12px 12px;
+    font-size: 8px;
+    font-weight: 700;
+    background-color: var(--background-hover-color);
+    color: var(--color-description);
+}
 .gif-image {
     display: block;
     width: 100%;
