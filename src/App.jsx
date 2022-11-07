@@ -36,7 +36,7 @@ function App() {
 
           <Route path='/' component={ Home }></Route>
           {/* Se le coloca un ? al rating para decirle que el parámetro es opcional, si no lo tiene entonces ignoralo y matchea */}
-          <Route path='/search/:keyword/:rating?' component={ ListOfGifs } /> 
+          <Route path='/search/:keyword/:rating?/:lang?' component={ ListOfGifs } /> 
 
           <Route path='/detail/:id' component={ Detail } />
 

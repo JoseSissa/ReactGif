@@ -12,8 +12,8 @@ import { useNearScreen } from '../../hooks/useNearScreen';
 import { Helmet } from 'react-helmet';
 
 function ListOfGifs({ params }) {
-    const { keyword, rating = 'g' } = params;
-    const { loading, gifs, setPage } = useGifs(keyword, rating);
+    const { keyword, rating = 'g', lang = 'en' } = params;
+    const { loading, gifs, setPage } = useGifs(keyword, rating, lang);
     const externalRef = useRef();
     const { isNearScreen } = useNearScreen({
         distance: '100px',
