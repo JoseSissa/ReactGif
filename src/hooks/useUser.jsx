@@ -4,8 +4,14 @@ import Context from '../context/UserContext'
 function useUser() {
     const {jwt, setJWT} = useContext(Context)
 
-    const login = useCallback(() => {
-        setJWT('test')
+    const login = useCallback(({ username, password }) => {
+        loginService({ username, password })
+            .then(jwt => {
+                setJWT(jwt)
+            })
+            .catch(err => {
+                console.error(err);
+            })
     }, [setJWT])
 
 
