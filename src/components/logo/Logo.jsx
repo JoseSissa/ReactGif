@@ -21,9 +21,11 @@ function Logo() {
     }, [setShowButtonHome]);
 
     return ( 
-        <Link href='/'>
-            <a id='logo' className='logo' ref={referenceHome}><img src="/images/vite.svg" alt="Logo" /></a>
-        </Link>
+        <div className='logo'>
+            <Link href='/'>
+                <a id='logo' ref={referenceHome}><img src="/images/vite.svg" alt="Logo" /></a>
+            </Link>
+        </div>
      );
 }
 

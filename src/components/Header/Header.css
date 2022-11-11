@@ -1,0 +1,11 @@
+.gf-header {
+    display: flex;
+    justify-content: flex-end;
+}
+.gf-header a {
+    color: #fff;
+    font-weight: 700;
+}
+.gf-header a:hover {
+    text-decoration: underline;
+}
